@@ -23,6 +23,15 @@
     #00c6ff 80%,
     #00dbde 100%
   );
+  --border-gradient: linear-gradient(
+    90deg,
+    #00dbde 0%,
+    #fc00ff 20%,
+    #ff8c00 40%,
+    #3cff00 60%,
+    #00c6ff 80%,
+    #00dbde 100%
+  );
 }
 
 * {
@@ -170,9 +179,32 @@ body {
   background-color: #666;
 }
 
-.image {
-  border: 2px solid white;
+.scrolling-border {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
   border-radius: 20px;
+  box-shadow: 3px 3px 5px #333;
+}
+
+.scrolling-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: var(--border-gradient);
+  background-size: 200% 100%;
+  animation: scrollGradientBorder var(--gradient-speed) linear infinite;
+}
+
+.image {
+  display: block;
+  position: relative;
+  border: 2px var(--background-gradient);
+  border-radius: 20px;
+  z-index: 2;
 }
 
 .footer {
@@ -226,6 +258,16 @@ body {
 
   100% {
     background-position: 100% center;
+  }
+}
+
+@keyframes scrollGradientBorder {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: -200% center;
   }
 }
 
