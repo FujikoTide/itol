@@ -14,7 +14,7 @@
   --navbar-height: calc((var(--padding-vertical) * 2) + var(--line-height));
   --navbar-total-offset: calc(var(--navbar-height) + var(--gradient-height));
 
-  --background-gradient: linear-gradient(
+  --nav-gradient: linear-gradient(
     160deg,
     #00dbde 0%,
     #fc00ff 20%,
@@ -72,6 +72,7 @@ body {
   width: 100%;
   display: flex;
   height: var(--navbar-height);
+  z-index: 100;
 }
 
 .navbar::after {
@@ -82,7 +83,7 @@ body {
   width: 100%;
   height: var(--gradient-height);
 
-  background: var(--background-gradient);
+  background: var(--nav-gradient);
   background-size: 200% 100%;
   animation: scrollGradient var(--gradient-speed) linear infinite;
 }
@@ -128,6 +129,16 @@ body {
   margin: 0 auto;
 }
 
+.project .portfolio {
+  margin-right: 20px;
+  margin-left: 0px;
+}
+
+.project.left .portfolio {
+  margin-right: 0px;
+  margin-left: 20px;
+}
+
 .project {
   display: flex;
 }
@@ -136,7 +147,7 @@ body {
   flex-direction: row-reverse;
 }
 
-.project.light {
+.project.light-bg {
   background-color: #888;
   border-radius: 20px;
   margin: 0 0 20px;
@@ -144,7 +155,7 @@ body {
   box-shadow: 2px 2px 10px #333;
 }
 
-.project.dark {
+.project.dark-bg {
   background-color: #666;
   border-radius: 20px;
   margin: 0 0 20px;
@@ -154,6 +165,20 @@ body {
 
 .icon {
   height: 40px;
+  padding-right: 10px;
+}
+
+.links {
+  text-align: center;
+}
+
+.links li:hover {
+  color: black;
+}
+
+.external-link {
+  height: 40px;
+  padding-left: 10px;
 }
 
 .tech {
@@ -172,11 +197,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 2px 2px 10px #555;
+  box-shadow: 2px 2px 10px #555, inset 2px 2px #aaa;
 }
 
-.tech.light li {
+.tech.dark-button li {
   background-color: #666;
+  box-shadow: 2px 2px 10px #555, inset 2px 2px #999;
 }
 
 .scrolling-border {
@@ -193,7 +219,6 @@ body {
   position: absolute;
   inset: 0;
   z-index: 1;
-
   background: var(--border-gradient);
   background-size: 200% 100%;
   animation: scrollGradientBorder var(--gradient-speed) linear infinite;
@@ -202,7 +227,6 @@ body {
 .image {
   display: block;
   position: relative;
-  border: 2px var(--background-gradient);
   border-radius: 20px;
   z-index: 2;
 }
@@ -217,6 +241,7 @@ body {
   display: flex;
   justify-content: center;
   height: var(--navbar-height);
+  z-index: 100;
 }
 
 .footer::before {
@@ -226,7 +251,7 @@ body {
   top: calc(-1 * var(--gradient-height));
   width: 100%;
   height: var(--gradient-height);
-  background: var(--background-gradient);
+  background: var(--nav-gradient);
   background-size: 200% 100%;
   animation: scrollGradientReverse var(--gradient-speed) linear infinite;
 }
@@ -236,6 +261,11 @@ body {
 }
 
 .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
   width: 45px;
   height: 45px;
   position: relative;
@@ -321,5 +351,82 @@ body {
 
   100% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  .main-content {
+    padding: 20px 0;
+    max-width: 90vw;
+    min-width: 992px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  .project,
+  .project.left {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .project .portfolio,
+  .project.left .portfolio {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .project .portfolio .buttons .tech {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    padding-top: calc((var(--line-height) + 2rem) * 2);
+  }
+
+  .navbar {
+    flex-direction: column;
+    height: calc(var(--navbar-height) * 2);
+  }
+
+  .navbar ul {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+  }
+
+  .main-content {
+    padding: 20px 0;
+    max-width: 90vw;
+    min-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px 0;
+    max-width: 90vw;
+    min-width: 600px;
+  }
+
+  .image {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 20px 0;
+    max-width: 90vw;
+    min-width: 450px;
+  }
+
+  .image {
+    width: 80vw;
   }
 }
