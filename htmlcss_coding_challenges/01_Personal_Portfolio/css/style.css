@@ -54,6 +54,10 @@ h3 {
   margin: 10px 0;
 }
 
+h4 {
+  font-size: 1.8rem;
+}
+
 body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 2rem;
@@ -107,14 +111,15 @@ body {
   line-height: var(--line-height);
 }
 
-.navbar li a:hover {
-  background-color: #ddd;
-  color: black;
+.navbar li a.current {
+  cursor: default;
+  background-color: #ff8c00;
+  color: white;
 }
 
-.navbar li a.active {
-  background-color: #007bff;
-  color: white;
+.navbar li a:not(.current):hover {
+  background-color: violet;
+  color: black;
 }
 
 .tagline {
@@ -173,13 +178,15 @@ body {
   padding-left: 10px;
 }
 
-.tech {
+.tech,
+.about-tech {
   list-style: none;
   display: inline-flex;
   flex-wrap: wrap;
 }
 
-.tech li {
+.tech li,
+.about-tech li {
   background-color: #888;
   margin: 5px;
   padding: 10px;
@@ -265,6 +272,12 @@ body {
 }
 
 .footer-text {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+.footer-text a {
   color: white;
 }
 
