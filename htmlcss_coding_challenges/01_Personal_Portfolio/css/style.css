@@ -450,4 +450,9 @@ body {
   .image {
     width: 80vw;
   }
+
+  .links .tech .icon,
+  .links .tech .external-link {
+    height: 30px;
+  }
 }
