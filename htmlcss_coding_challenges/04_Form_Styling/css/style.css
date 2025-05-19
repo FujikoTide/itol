@@ -66,12 +66,6 @@ h1 {
   padding-left: 20px;
 }
 
-/* .form-container form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
 .form-group {
   display: flex;
   flex-direction: column;
