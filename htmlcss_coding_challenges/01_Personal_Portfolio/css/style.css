@@ -379,7 +379,7 @@ body {
   .main-content {
     padding: 20px 0;
     max-width: 90vw;
-    min-width: 992px;
+    min-width: 970px;
   }
 
   h1,
@@ -424,7 +424,7 @@ body {
   .main-content {
     padding: 20px 0;
     max-width: 90vw;
-    min-width: 768px;
+    min-width: 750px;
   }
 }
 
@@ -432,7 +432,7 @@ body {
   .main-content {
     padding: 20px 0;
     max-width: 90vw;
-    min-width: 600px;
+    min-width: 580px;
   }
 
   .image {
