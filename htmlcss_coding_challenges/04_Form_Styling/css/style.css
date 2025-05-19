@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Changa+One:ital@0;1&family=Chango&family=Climate+Crisis:YEAR@2014&family=Electrolize&family=Erica+One&family=Exo:ital,wght@0,100..900;1,100..900&family=Fascinate&family=Goldman:wght@400;700&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Righteous&family=Russo+One&family=Sigmar&family=Zen+Dots&display=swap');
+
+:root {
+  --navbar-content-height: 70px;
+  --navbar-height: var(--navbar-content-height);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 2rem;
+  padding-top: calc(var(--navbar-content-height) * 1.5);
+  padding-bottom: 2rem;
+  background: #999;
+  color: #333377;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.navbar {
+  top: 0;
+  left: 0;
+  background-color: #333377;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  height: var(--navbar-height);
+  z-index: 100;
+}
+
+.bars-container {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.company-name {
+  font-family: 'Exo', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  color: white;
+  line-height: 1;
+  position: relative;
+  top: 10.5px;
+}
+
+.form-container {
+  max-width: 90vw;
+  min-width: 1000px;
+  border: 5px solid black;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.form-container h1 {
+  width: 100%;
+  background-color: white;
+  padding-left: 20px;
+}
+
+/* .form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.form-group button:focus {
+  outline: none;
+  background-color: #222255;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+.form-group label {
+  display: block;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 5px solid black;
+  font-family: 'Aldrich';
+  font-size: 2rem;
+  color: #333377;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group button {
+  cursor: pointer;
+  width: 100%;
+  border: 5px solid black;
+  margin-top: 20px;
+  padding: 10px;
+  font-family: 'Aldrich';
+  font-size: 2rem;
+  background-color: #333377;
+  color: white;
+}
