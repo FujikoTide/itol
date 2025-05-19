@@ -444,7 +444,7 @@ body {
   .main-content {
     padding: 20px 0;
     max-width: 90vw;
-    min-width: 450px;
+    min-width: 430px;
   }
 
   .image {
@@ -461,7 +461,7 @@ body {
   .main-content {
     padding: 10px 0;
     max-width: 90vw;
-    min-width: 300px;
+    min-width: 280px;
   }
 
   body {
@@ -476,5 +476,29 @@ body {
   .links .tech {
     display: block;
     width: 100%;
+  }
+
+  .navbar li a {
+    padding: var(--padding-vertical) 5px;
+  }
+}
+
+@media (max-width: 300px) {
+  .main-content {
+    padding: 5px 0;
+    max-width: 90vw;
+    min-width: 200px;
+  }
+
+  body {
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .navbar li a {
+    padding: var(--padding-vertical) 2px;
   }
 }
