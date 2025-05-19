@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Changa+One:ital@0;1&family=Chango&family=Climate+Crisis&family=Electrolize&family=Erica+One&family=Exo:ital,wght@0,100..900;1,100..900&family=Fascinate&family=Goldman:wght@400;700&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Righteous&family=Russo+One&family=Sigmar&family=Zen+Dots&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+  margin: 0;
+  min-height: 100vh;
+  /* background: linear-gradient(
+    170deg,
+    #ffdab9,
+    #ffc0cb,
+    #ffa07a,
+    #ff7f50,
+    #fffacd,
+    #ffc0cb,
+    #ffdab9
+  ); */
+
+  background: linear-gradient(
+    170deg,
+    #ffa07a,
+    #ff7f50,
+    #ff6347,
+    #ff1493,
+    #ff8c00,
+    #ff69b4,
+    #ff7f50,
+    #ffa07a
+  );
+
+  background-size: 100% 400%;
+
+  animation-name: slowFadeGrapefruit;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slowFadeGrapefruit {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.content-wrapper {
+  padding: 50px;
+  text-align: center;
+  color: #333;
+}
+
+.content-wrapper h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.bold-font {
+  font-family: 'Chango';
+  font-size: 24rem;
+  text-align: left;
+  color: gold;
+}
+
+.square-font {
+  font-family: 'Orbitron';
+  font-size: 12rem;
+  text-align: left;
+  color: crimson;
+}
+
+.image-container-feathered,
+.feathered-image-direct {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 50%,
+    transparent 90%
+  );
+  mask-image: radial-gradient(ellipse at center, black 50%, transparent 90%);
+}
+
+.image-container-feathered img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1280px) {
+  .bold-font {
+    font-size: 18rem;
+  }
+
+  .square-font {
+    font-size: 8rem;
+  }
+}
