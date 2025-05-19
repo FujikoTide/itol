@@ -456,3 +456,25 @@ body {
     height: 30px;
   }
 }
+
+@media (max-width: 450px) {
+  .main-content {
+    padding: 10px 0;
+    max-width: 90vw;
+    min-width: 300px;
+  }
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  .links .tech,
+  .links .tech {
+    display: block;
+    width: 100%;
+  }
+}
