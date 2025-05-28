@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/*Optional*/
+/* @source "./src/templates";   */ /* Tell Tailwind to scan this folder */
+/* @source "../shared/components"; */ /* And this one, too */
+
+/* (Optional) Configure design tokens directly in CSS */
+@theme {
+  --color-primary: oklch(0.8 0.15 100);
+  --spacing-xl: 4rem;
+}
+
+/* (Optional) Add custom utilities or variants inline */
+@layer utilities {
+  .placeholder-icon {
+    @apply flex aspect-square h-12 w-12 items-center justify-center rounded-full text-xl;
+  }
+
+  .placeholder-image-rect {
+    @apply flex w-full items-center justify-center bg-gray-400;
+    aspect-ratio: 4/3;
+  }
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* standard way to hide an element but still keep it accessible to screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
