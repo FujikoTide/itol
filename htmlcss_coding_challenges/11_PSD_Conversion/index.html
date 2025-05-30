@@ -3,7 +3,330 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Wireframe Image Conversion Challenge Site</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="site-header">
+      <div class="header-content">
+        <div class="header-logo">LOGO</div>
+        <div class="header-search">
+          <img
+            class="header-search-icon-size"
+            src="./svg/search-handdrawn.svg"
+            alt=""
+          />
+          <input type="search" placeholder="" />
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="#">Home<span class="divider"></span></a>
+            </li>
+            <li>
+              <a href="#">About Us<span class="divider"></span></a>
+            </li>
+            <li>
+              <a href="#">Shop<span class="divider"></span></a>
+            </li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-cart">
+          <div class="header-cart-icon">
+            <img
+              class="header-cart-icon-size"
+              src="./svg/cart-handdrawn.svg"
+              alt=""
+            />
+          </div>
+
+          <span class="header-cart-text">Your Cart</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="examples-section">
+        <div class="container">
+          <h2 class="examples-title">Examples of Services or Products</h2>
+          <div class="examples-grid">
+            <div class="product-placeholder">
+              <div class="product-placeholder-visual">
+                <div class="camera-icon">
+                  <img
+                    class="camera-icon"
+                    src="./svg/camera-handdrawn.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="product-placeholder">
+              <div class="product-placeholder-visual">
+                <div>
+                  <img
+                    class="camera-icon"
+                    src="./svg/camera-handdrawn.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="product-placeholder">
+              <div class="product-placeholder-visual">
+                <div class="camera-icon">
+                  <img
+                    class="camera-icon"
+                    src="./svg/camera-handdrawn.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="shop-now-btn">Shop Now</button>
+        </div>
+      </section>
+
+      <section class="featured-products-section light-section">
+        <div class="container">
+          <h2 class="featured-products-title">Featured Products</h2>
+          <div class="featured-carousel">
+            <button class="carousel-arrow">&lt;</button>
+
+            <div class="featured-product-item">
+              <div class="product-placeholder">
+                <div class="product-placeholder-visual">
+                  <img
+                    class="camera-icon"
+                    src="./svg/camera-handdrawn.svg"
+                    alt="Product image placeholder"
+                  />
+                </div>
+              </div>
+              <div class="featured-product-details">
+                <p class="product-name">Product Name</p>
+                <p class="product-price">£100</p>
+              </div>
+            </div>
+
+            <div class="featured-product-item">
+              <div class="product-placeholder">
+                <!-- This is the grey square visual -->
+                <div class="product-placeholder-visual">
+                  <img
+                    class="camera-icon"
+                    src="./svg/camera-handdrawn.svg"
+                    alt="Product image placeholder"
+                  />
+                </div>
+              </div>
+              <div class="featured-product-details">
+                <p class="product-name">Product Name</p>
+                <p class="product-price">£100</p>
+              </div>
+            </div>
+
+            <button class="carousel-arrow">&gt;</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter-section light-section">
+        <div class="container">
+          <h2 class="newsletter-title">News Letter</h2>
+          <div class="newsletter-inline-wrapper">
+            <p class="newsletter-paragraph">
+              A short description that invites users to sign up for weekly news
+              on what the latest products and services.
+            </p>
+
+            <form class="newsletter-form">
+              <input
+                class="newsletter-email-input"
+                type="email"
+                placeholder="Email Address"
+              />
+              <button class="newsletter-subscript-button" type="submit">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-showcase-section light-section">
+        <div class="container">
+          <div class="product-showcase-layout">
+            <div class="showcase-large-item">
+              <div class="product-placeholder">
+                <div
+                  class="product-placeholder-visual product-placeholder-bg-big"
+                >
+                  <div>
+                    <img
+                      class="camera-icon product-placeholder-camera-icon-big"
+                      src="./svg/camera-handdrawn.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-small-items-grid">
+              <div>
+                <div class="product-placeholder">
+                  <div class="product-placeholder-visual">
+                    <div class="camera-icon">
+                      <img
+                        class="camera-icon"
+                        src="./svg/camera-handdrawn.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="product-name">Product Name</p>
+                  <p class="product-price">£100</p>
+                </div>
+              </div>
+              <div>
+                <div class="product-placeholder">
+                  <div class="product-placeholder-visual">
+                    <div class="camera-icon">
+                      <img
+                        class="camera-icon"
+                        src="./svg/camera-handdrawn.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="product-name">Product Name</p>
+                  <p class="product-price">£100</p>
+                </div>
+              </div>
+              <div>
+                <div class="product-placeholder">
+                  <div class="product-placeholder-visual">
+                    <div class="camera-icon">
+                      <img
+                        class="camera-icon"
+                        src="./svg/camera-handdrawn.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="product-name">Product Name</p>
+                  <p class="product-price">£100</p>
+                </div>
+              </div>
+              <div>
+                <div class="product-placeholder">
+                  <div class="product-placeholder-visual">
+                    <div class="camera-icon">
+                      <img
+                        class="camera-icon"
+                        src="./svg/camera-handdrawn.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="product-name">Product Name</p>
+                  <p class="product-price">£100</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-shop-section light-section">
+        <div class="container">
+          <h2 class="about-shop-title">About Your Shop</h2>
+          <p>
+            Here is where you can try and captivate the users by providing them
+            with some background to your shops existence. Your mission as an
+            online shop and your vision for the future of your shop, products
+            and services.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo-section">
+            <div class="footer-logo">LOGO</div>
+            <p>
+              3RD PLANET FROM THE SUN<br />
+              ORION ARM, MILKY WAY
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4>Main Menu</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">The Company</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Discover</h4>
+            <ul>
+              <li><a href="#">The Team</a></li>
+              <li><a href="#">Our History</a></li>
+              <li><a href="#">Brand Motto</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Find Us On</h4>
+            <ul class="social-icons">
+              <li>
+                <i class="fa-brands fa-facebook-f social-icon-fa"></i>
+                <a href="#">Facebook</a>
+              </li>
+              <li>
+                <i class="fa-brands fa-twitter social-icon-fa"></i>
+                <a href="#">Twitter</a>
+              </li>
+              <li>
+                <i class="fa-brands fa-instagram social-icon-fa"></i>
+                <a href="#">Instagram</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright-bar">
+      <p>Copyright 2001. All Rights Reserved Company Name</p>
+    </div>
+  </body>
 </html>
