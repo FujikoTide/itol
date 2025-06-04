@@ -4,7 +4,7 @@
 
 ### Personal_Portfolio Challenge
 
-- [Personal_Portfolio Challenge](#01-personal-portfolio)
+- [Personal_Portfolio Challenge](#01_Personal_Portfolio)
 
 ### Responsive Design Challenge
 
