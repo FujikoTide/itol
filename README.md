@@ -1,81 +1,81 @@
-## Challenges
+## HTML/CSS Challenges
 
 ### Many of the challenges have been completed by multiple projects, and some have been included together into one project, the following will describe which project have been incorporated into which challenges:
 
-### Personal_Portfolio Challenge
+### Personal Portfolio Challenge
 
-- [Personal_Portfolio Challenge](#01_Personal_Portfolio)
+- [01_Personal_Portfolio](#01_Personal_Portfolio)
 
 ### Responsive Design Challenge
 
-- [Personal_Portfolio Challenge](#01_Personal_Portfolio)
-- [Image_Gallery Challenge](#07_Image_Gallery)
-- [CSS_Framework Challenge](#08_Css_Framework)
-- [Map_Page Challenge](#09_Map_Page)
-- [PSD_Conversion Challenge](#11_Psd_Conversion)
+- [01_Personal_Portfolio](#01_Personal_Portfolio)
+- [07_Image_Gallery](#07_Image_Gallery)
+- [08_Css_Framework](#08_Css_Framework)
+- [09_Map_Page](#09_Map_Page)
+- [11_Psd_Conversion](#11_Psd_Conversion)
 
 ### CSS Animation Challenge
 
-- [Personal_Portfolio Challenge](#01_Personal_Portfolio)
-- [Typography Challenge](#06_Typography)
-- [Image_Gallery Challenge](#07_Image_Gallery)
+- [01_Personal_Portfolio](#01_Personal_Portfolio)
+- [06_Typography](#06_Typography)
+- [07_Image_Gallery](#07_Image_Gallery)
 
-### Form_Styling Challenge
+### Form Styling Challenge
 
-- [Form_Styling Challenge](#04_Form_Styling)
-- [CSS_Framework Challenge](#08_Css_Framework)
-- [Map_Page Challenge](#09_Map_Page)
-- [PSD_Conversion Challenge](#11_Psd_Conversion)
+- [04_Form_Styling](#04_Form_Styling)
+- [08_Css_Framework](#08_Css_Framework)
+- [09_Map_Page](#09_Map_Page)
+- [11_Psd_Conversion](#11_Psd_Conversion)
 
 ### Flexbox/Grid Layout Challenge
 
-- [Personal_Portfolio Challenge](#01_Personal_Portfolio)
-- [Form_Styling Challenge](#04_Form_Styling)
-- [Image_Gallery Challenge](#07_Image_Gallery)
-- [CSS_Framework Challenge](#08_Css_Framework)
-- [Map_Page Challenge](#09_Map_Page)
-- [PSD_Conversion Challenge](#11_Psd_Conversion)
+- [01_Personal_Portfolio](#01_Personal_Portfolio)
+- [04_Form_Styling](#04_Form_Styling)
+- [07_Image_Gallery](#07_Image_Gallery)
+- [08_Css_Framework](#08_Css_Framework)
+- [09_Map_Page](#09_Map_Page)
+- [11_Psd_Conversion](#11_Psd_Conversion)
 
 ### Typography Challenge
 
-- [Personal_Portfolio Challenge](#01_Personal_Portfolio)
-- [Form_Styling Challenge](#04_Form_Styling)
-- [Typography Challenge](#06_Typography)
-- [Image_Gallery Challenge](#07_Image_Gallery)
-- [CSS_Framework Challenge](#08_Css_Framework)
-- [Map_Page Challenge](#09_Map_Page)
-- [PSD_Conversion Challenge](#11_Psd_Conversion)
-- [HTML_Email Challenge](#12_Html_Email)
+- [01_Personal_Portfolio](#01_Personal_Portfolio)
+- [04_Form_Styling](#04_Form_Styling)
+- [06_Typography](#06_Typography)
+- [07_Image_Gallery](#07_Image_Gallery)
+- [08_Css_Framework](#08_Css_Framework)
+- [09_Map_Page](#09_Map_Page)
+- [11_Psd_Conversion](#11_Psd_Conversion)
+- [12_Html_Email](#12_Html_Email)
 
-### Image_Gallery Challenge
+### Image Gallery Challenge
 
-- [Image_Gallery Challenge](#07_Image_Gallery)
+- [07_Image_Gallery](#07_Image_Gallery)
 
-### CSS_Framework Challenge
+### Css Framework Challenge
 
-- [CSS_Framework Challenge](#08_Css_Framework)
-- [Map_Page Challenge](#09_Map_Page)
+- [08_Css_Framework](#08_Css_Framework)
+- [09_Map_Page](#09_Map_Page)
 
-### Map_Page Challenge
+### Map Page Challenge
 
-- [Map_Page Challenge](#09_Map_Page)
+- [09_Map_Page](#09_Map_Page)
 
 ### Accessibility Challenge
 
-- [PSD_Conversion Challenge](#11_Psd_Conversion)
+- [11_Psd_Conversion](#11_Psd_Conversion)
 
-### PSD_Conversion Challenge
+### Psd Conversion Challenge
 
-- [CSS_Framework Challenge](#08_Css_Framework)
-- [PSD_Conversion Challenge](#11_Psd_Conversion)
+- [08_Css_Framework](#08_Css_Framework)
+- [11_Psd_Conversion](#11_Psd_Conversion)
 
-### HTML_Email Challenge
+### HTML Email Challenge
 
-- [HTML_Email Challenge](#12_Html_Email)
+- [12_Html_Email](#12_Html_Email)
 
 ### Web Application UI Design Challenge
 
-- [Map_Page Challenge](#09_Map_Page)
+- [09_Map_Page](#09_Map_Page)
 
 ## Projects
 
