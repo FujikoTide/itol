@@ -1,9 +1,435 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home Finder - Europe</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/output.css" />
   </head>
-  <body></body>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-lg">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#" class="text-2xl font-bold text-orange-600">
+              <i class="fas fa-home mr-2"></i>EuroHomes
+            </a>
+          </div>
+
+          <!-- Navigation Links (Desktop) -->
+          <div class="hidden md:flex md:items-center md:space-x-5 lg:space-x-8">
+            <a
+              href="#"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-orange-600"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-orange-600"
+              >Listings</a
+            >
+            <a
+              href="#"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-orange-600"
+              >About Us</a
+            >
+            <a
+              href="#"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-orange-600"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="flex items-center md:hidden">
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="text-gray-500 hover:text-orange-600 focus:text-orange-600 focus:outline-none"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <i class="fas fa-bars fa-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <div class="hidden md:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-orange-50 hover:text-orange-600"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-orange-50 hover:text-orange-600"
+            >Listings</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-orange-50 hover:text-orange-600"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-orange-50 hover:text-orange-600"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bar below Navbar (Search Filters) -->
+    <section class="sticky top-16 z-40 bg-gray-200 p-4 shadow-md">
+      <div class="container mx-auto">
+        <form
+          class="grid grid-cols-1 items-end gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6"
+        >
+          <!-- Search Input -->
+          <div class="lg:col-span-2">
+            <label
+              for="search-location"
+              class="mb-1 block text-sm font-medium text-gray-700"
+              >Search Location</label
+            >
+            <input
+              type="text"
+              id="search-location"
+              placeholder="City, Postal Code, Address..."
+              class="w-full rounded-md border border-gray-300 bg-white p-2 shadow-sm focus:outline-none"
+            />
+          </div>
+
+          <!-- Number Input 1: Min Beds -->
+          <div>
+            <label
+              for="min-beds"
+              class="mb-1 block text-sm font-medium text-gray-700"
+              >Min Beds</label
+            >
+            <input
+              type="number"
+              id="min-beds"
+              min="0"
+              placeholder="Any"
+              class="w-full rounded-md border border-gray-300 bg-white p-2 shadow-sm focus:outline-none"
+            />
+          </div>
+
+          <!-- Number Input 2: Max Price -->
+          <div>
+            <label
+              for="max-price"
+              class="mb-1 block text-sm font-medium text-gray-700"
+              >Max Price (€)</label
+            >
+            <input
+              type="number"
+              id="max-price"
+              min="0"
+              step="10000"
+              placeholder="Any"
+              class="w-full rounded-md border border-gray-300 bg-white p-2 shadow-sm focus:outline-none"
+            />
+          </div>
+
+          <!-- Select Input 1: Property Type -->
+          <div>
+            <label
+              for="property-type"
+              class="mb-1 block text-sm font-medium text-gray-700"
+              >Property Type</label
+            >
+            <select
+              id="property-type"
+              class="h-[41px] w-full rounded-md border border-gray-300 bg-white p-2 shadow-sm focus:outline-none"
+            >
+              <option>Any</option>
+              <option>House</option>
+              <option>Apartment</option>
+              <option>Villa</option>
+              <option>Chalet</option>
+            </select>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="sm:col-start-auto">
+            <label
+              class="invisible mb-1 block hidden text-sm font-medium text-gray-700 sm:block"
+              >Action</label
+            >
+            <button
+              type="submit"
+              class="focus:ring-opacity-75 w-full rounded-md bg-orange-600 px-4 py-2 font-semibold text-white shadow-sm hover:bg-orange-700 focus:outline-none"
+            >
+              <i class="fas fa-search mr-1"></i> Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main
+      class="main-content-area container mx-auto flex flex-col gap-6 p-4 lg:flex-row"
+    >
+      <!-- Left Panel: House Cards -->
+      <aside
+        class="custom-scrollbar left-panel-scroll w-full overflow-y-auto rounded-lg bg-white p-4 shadow-xl lg:w-1/3 xl:w-1/4"
+      >
+        <h2 class="mb-5 border-b pb-3 text-2xl font-semibold text-gray-700">
+          Properties
+        </h2>
+
+        <div
+          class="mb-6 overflow-hidden rounded-lg border border-gray-200 bg-gray-50 shadow-md transition-shadow duration-300 hover:shadow-lg"
+        >
+          <img
+            src="./images/behzad-ghaffarian-8p-3Svxo47E-unsplash.jpg"
+            alt="Parisian Apartment"
+            class="h-48 w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-1 text-lg font-semibold text-blue-700">
+              Elegant Parisian Apartment
+            </h3>
+            <p class="mb-1 text-sm text-gray-600">
+              <i class="fas fa-map-marker-alt mr-1 text-gray-400"></i>15 Rue de
+              Rivoli, 75001 Paris, France
+            </p>
+            <p class="my-2 text-xl font-bold text-gray-800">€1,250,000</p>
+            <div
+              class="flex justify-between border-t pt-2 text-sm text-gray-500"
+            >
+              <span><i class="fas fa-bed mr-1"></i> 3</span>
+              <span><i class="fas fa-bath mr-1"></i> 2</span>
+              <span
+                ><i class="fas fa-ruler-combined mr-1"></i> 150 m<sup
+                  >2</sup
+                ></span
+              >
+            </div>
+            <a
+              href="#"
+              class="mt-4 inline-block w-full rounded-md bg-blue-500 px-4 py-2 text-center text-sm font-medium text-white transition duration-150 hover:bg-blue-600"
+              >View Details</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="mb-6 overflow-hidden rounded-lg border border-gray-200 bg-gray-50 shadow-md transition-shadow duration-300 hover:shadow-lg"
+        >
+          <img
+            src="./images/suzanne-rushton-c9OQzSYgYH8-unsplash.jpg"
+            alt="Berlin Loft"
+            class="h-48 w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-1 text-lg font-semibold text-purple-700">
+              Modern Berlin Loft
+            </h3>
+            <p class="mb-1 text-sm text-gray-600">
+              <i class="fas fa-map-marker-alt mr-1 text-gray-400"></i
+              >Kurfürstendamm 21, 10719 Berlin, Germany
+            </p>
+            <p class="my-2 text-xl font-bold text-gray-800">€3,200/month</p>
+            <div
+              class="flex justify-between border-t pt-2 text-sm text-gray-500"
+            >
+              <span><i class="fas fa-bed mr-1"></i> 2</span>
+              <span><i class="fas fa-bath mr-1"></i> 2</span>
+              <span
+                ><i class="fas fa-ruler-combined mr-1"></i> 110 m<sup
+                  >2</sup
+                ></span
+              >
+            </div>
+            <a
+              href="#"
+              class="mt-4 inline-block w-full rounded-md bg-purple-500 px-4 py-2 text-center text-sm font-medium text-white transition duration-150 hover:bg-purple-600"
+              >View Details</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="mb-6 overflow-hidden rounded-lg border border-gray-200 bg-gray-50 shadow-md transition-shadow duration-300 hover:shadow-lg"
+        >
+          <img
+            src="./images/bohdan-stocek-J_pSdNTqncI-unsplash.jpg"
+            alt="Roman Villa"
+            class="h-48 w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-1 text-lg font-semibold text-green-700">
+              Charming Roman Villa
+            </h3>
+            <p class="mb-1 text-sm text-gray-600">
+              <i class="fas fa-map-marker-alt mr-1 text-gray-400"></i>Via Appia
+              Antica 100, 00178 Rome, Italy
+            </p>
+            <p class="my-2 text-xl font-bold text-gray-800">€2,100,000</p>
+            <div
+              class="flex justify-between border-t pt-2 text-sm text-gray-500"
+            >
+              <span><i class="fas fa-bed mr-1"></i> 5</span>
+              <span><i class="fas fa-bath mr-1"></i> 4</span>
+              <span
+                ><i class="fas fa-ruler-combined mr-1"></i> 300 m<sup
+                  >2</sup
+                ></span
+              >
+            </div>
+            <a
+              href="#"
+              class="mt-4 inline-block w-full rounded-md bg-green-500 px-4 py-2 text-center text-sm font-medium text-white transition duration-150 hover:bg-green-600"
+              >View Details</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="mb-6 overflow-hidden rounded-lg border border-gray-200 bg-gray-50 shadow-md transition-shadow duration-300 hover:shadow-lg"
+        >
+          <img
+            src="./images/ocean-gal-nV8gq80rDm8-unsplash.jpg"
+            alt="Madrid Penthouse"
+            class="h-48 w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-1 text-lg font-semibold text-red-700">
+              Sunny Madrid Penthouse
+            </h3>
+            <p class="mb-1 text-sm text-gray-600">
+              <i class="fas fa-map-marker-alt mr-1 text-gray-400"></i>Gran Vía
+              28, 28013 Madrid, Spain
+            </p>
+            <p class="my-2 text-xl font-bold text-gray-800">€1,850,000</p>
+            <div
+              class="flex justify-between border-t pt-2 text-sm text-gray-500"
+            >
+              <span><i class="fas fa-bed mr-1"></i> 4</span>
+              <span><i class="fas fa-bath mr-1"></i> 3</span>
+              <span
+                ><i class="fas fa-ruler-combined mr-1"></i> 200 m<sup
+                  >2</sup
+                ></span
+              >
+            </div>
+            <a
+              href="#"
+              class="mt-4 inline-block w-full rounded-md bg-red-500 px-4 py-2 text-center text-sm font-medium text-white transition duration-150 hover:bg-red-600"
+              >View Details</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="mb-6 overflow-hidden rounded-lg border border-gray-200 bg-gray-50 shadow-md transition-shadow duration-300 hover:shadow-lg"
+        >
+          <img
+            src="./images/mateo-krossler-6xDPKxeLVhc-unsplash.jpg"
+            alt="Amsterdam Canal House"
+            class="h-48 w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-1 text-lg font-semibold text-amber-700">
+              Historic Canal House
+            </h3>
+            <p class="mb-1 text-sm text-gray-600">
+              <i class="fas fa-map-marker-alt mr-1 text-gray-400"></i
+              >Prinsengracht 263, 1016 GV Amsterdam, Netherlands
+            </p>
+            <p class="my-2 text-xl font-bold text-gray-800">€2,300,000</p>
+            <div
+              class="flex justify-between border-t pt-2 text-sm text-gray-500"
+            >
+              <span><i class="fas fa-bed mr-1"></i> 5</span>
+              <span><i class="fas fa-bath mr-1"></i> 3.5</span>
+              <span
+                ><i class="fas fa-ruler-combined mr-1"></i> 280 m<sup
+                  >2</sup
+                ></span
+              >
+            </div>
+            <a
+              href="#"
+              class="mt-4 inline-block w-full rounded-md bg-amber-500 px-4 py-2 text-center text-sm font-medium text-white transition duration-150 hover:bg-amber-600"
+              >View Details</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="mb-6 overflow-hidden rounded-lg border border-gray-200 bg-gray-50 shadow-md transition-shadow duration-300 hover:shadow-lg"
+        >
+          <img
+            src="./images/claire-yeung-_JEyVtYXPfU-unsplash.jpg"
+            alt="Lisbon Apartment with View"
+            class="h-48 w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-1 text-lg font-semibold text-teal-700">
+              Apartment with River View
+            </h3>
+            <p class="mb-1 text-sm text-gray-600">
+              <i class="fas fa-map-marker-alt mr-1 text-gray-400"></i>Rua
+              Augusta 100, 1100-053 Lisbon, Portugal
+            </p>
+            <p class="my-2 text-xl font-bold text-gray-800">€950,000</p>
+            <div
+              class="flex justify-between border-t pt-2 text-sm text-gray-500"
+            >
+              <span><i class="fas fa-bed mr-1"></i> 2</span>
+              <span><i class="fas fa-bath mr-1"></i> 2</span>
+              <span
+                ><i class="fas fa-ruler-combined mr-1"></i> 130 m<sup
+                  >2</sup
+                ></span
+              >
+            </div>
+            <a
+              href="#"
+              class="mt-4 inline-block w-full rounded-md bg-teal-500 px-4 py-2 text-center text-sm font-medium text-white transition duration-150 hover:bg-teal-600"
+              >View Details</a
+            >
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Panel: Google Maps -->
+      <section
+        class="right-panel-map w-full rounded-lg bg-white p-1 shadow-xl lg:w-2/3 xl:w-3/4"
+      >
+        <iframe
+          class="h-full w-full rounded-md border-0"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d310270.01280000004!2d13.404953965136719!3d52.52000657981398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e373f035901%3A0x42120465b5e3b70!2sBerlin%2C%20Germany!5e0!3m2!1sen!2sus!4v1717108000000!5m2!1sen!2sus"
+          title="Google Maps View of Berlin, Germany"
+        >
+        </iframe>
+      </section>
+    </main>
+
+    <footer class="mt-auto bg-gray-800 p-5 text-center text-gray-300">
+      <p>
+        &copy; <span id="currentYear"></span> EuroHomes. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
 </html>
